@@ -13,8 +13,8 @@
 
 #define T_IMPULSE 4 * QUANT
 #define T_PAUSE 4 * QUANT			// ms
-#define T_DELAY 20 * QUANT
-#define REPEATS 10
+#define T_DELAY 5 * QUANT
+#define REPEATS 7
 
 
 int main(void)
@@ -27,7 +27,7 @@ int main(void)
 	/* Replace with your application code */
     while (1) 
     {
-		for(uint8_t n = 0; n< REPEATS; n++)
+		for(uint8_t n = 0; n < REPEATS; n++)
 		{
 			PORTB = 0b00000001;
 			_delay_ms(T_IMPULSE);
@@ -36,7 +36,7 @@ int main(void)
 		}
 		_delay_ms(T_DELAY);
 		
-		for(uint8_t n = 0; n< REPEATS; n++)
+		for(uint8_t n = 0; n < REPEATS; n++)
 		{
 			PORTB = 0b00000100;
 			_delay_ms(T_IMPULSE);
